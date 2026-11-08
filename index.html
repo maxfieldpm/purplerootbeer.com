@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Purple Rootbeer · Simple apps for everyday life</title>
-<meta name="description" content="Purple Rootbeer is a family-owned app publisher in Lehi, Utah, making simple, focused apps for iPhone and iPad.">
+<title>Purple Rootbeer · Practical things we love to build</title>
+<meta name="description" content="Purple Rootbeer builds practical apps, web tools and websites that solve everyday problems without the clutter.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235B2A91'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +28,15 @@ h1{margin:0;font-weight:700;font-size:clamp(40px,6.5vw,84px);line-height:1.02;le
 .btn:hover{background:var(--brand-dark);color:#fff}
 .btn-outline{background:transparent;border:1.5px solid var(--ink);color:var(--ink);word-break:break-all}
 .btn-outline:hover{background:var(--ink);color:#fff}
-.apps{display:flex;flex-wrap:wrap;justify-content:center;gap:48px 64px;padding:0 24px 112px}
-.app{flex:0 1 240px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+.apps{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px 40px;padding:0 24px 104px}
+.kicker{margin:0 0 40px;text-align:center}
+.values{max-width:1000px;margin:0 auto;padding:0 24px 104px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.value{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.value h3{margin:6px 0 0;font-size:19px;font-weight:600}
+.value p{margin:0;font-size:16px;line-height:1.55;color:var(--muted)}
+.vicon{width:64px;height:64px;border-radius:18px}
+.kind{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.app{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .icon{width:112px;height:112px;border-radius:26px;display:block;box-shadow:0 6px 18px rgba(28,22,38,.12)}
 .app h2{margin:8px 0 0;font-size:20px;font-weight:600}
 .app p{margin:0;font-size:16px;line-height:1.5;color:var(--muted)}
@@ -49,7 +56,7 @@ footer a{padding:8px;color:var(--muted)}
 <header>
 <a class="logo" href="/"><span aria-hidden="true"></span>Purple Rootbeer</a>
 <nav aria-label="Main">
-<a href="#apps">Apps</a>
+<a href="#work">What we make</a>
 <a href="#about">About</a>
 <a href="#support">Support</a>
 <a href="/privacy.html">Privacy</a>
@@ -58,44 +65,74 @@ footer a{padding:8px;color:var(--muted)}
 
 <main>
 <section class="hero">
-<span class="pill">Family-owned · Lehi, Utah</span>
-<h1>Simple apps for everyday life.</h1>
-<p class="lead">We build small, focused apps for iPhone and iPad, and we answer every email ourselves.</p>
-<a class="btn" href="#apps">See our apps</a>
+<span class="pill">Apps · Web tools · Websites</span>
+<h1>Practical things we love to build.</h1>
+<p class="lead">Purple Rootbeer makes simple, useful software that solves everyday problems without the clutter.</p>
+<a class="btn" href="#work">See what we make</a>
 </section>
 
-<section id="apps" class="apps" aria-label="Our apps">
+<section id="work" aria-labelledby="work-title">
+<div class="kicker"><h2 id="work-title" class="section">What we make</h2></div>
+<div class="apps">
 <article class="app">
 <img class="icon" src="/icons/hub-and-hangar.svg" alt="Hub &amp; Hangar app icon" width="112" height="112">
+<span class="kind">iPhone &amp; iPad game</span>
 <h2>Hub &amp; Hangar</h2>
 <p>Run your own airport. Build gates, sign airline deals, and grow a dirt strip into a busy hub.</p>
 <span class="tag">Coming soon</span>
 </article>
 <article class="app">
-<img class="icon" src="/icons/more-to-come.svg" alt="" width="112" height="112">
-<h2>More to come</h2>
-<p>Every app we make does one job, and does it well.</p>
-<span class="tag">In the works</span>
+<img class="icon" src="/icons/hoasecretary.svg" alt="HOASecretary icon" width="112" height="112">
+<span class="kind">Web tool</span>
+<h2>HOASecretary.com</h2>
+<p>Board tools for HOAs: meetings, votes, rental tracking and records in one simple place.</p>
+<span class="tag">In development</span>
 </article>
 <article class="app">
-<img class="icon" src="/icons/built-with-care.svg" alt="" width="112" height="112">
-<h2>Built with care</h2>
-<p>No clutter, no surprises, and a real person behind it.</p>
-<span class="tag">Our promise</span>
+<img class="icon" src="/icons/hoadocs.svg" alt="HOADocs icon" width="112" height="112">
+<span class="kind">Web tool</span>
+<h2>HOADocs.com</h2>
+<p>Resale disclosures and HOA documents, ordered online and delivered fast.</p>
+<span class="tag">In development</span>
 </article>
+<article class="app">
+<img class="icon" src="/icons/more-to-come.svg" alt="" width="112" height="112">
+<span class="kind">Next up</span>
+<h2>More to come</h2>
+<p>Every product we make does one job, and does it well.</p>
+<span class="tag">In the works</span>
+</article>
+</div>
+</section>
+
+<section class="values" aria-label="How we build">
+<div class="value">
+<svg class="vicon" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#F3EEFA"/><path d="M20 33l8 8 16-18" fill="none" stroke="#5B2A91" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<h3>Practical first</h3>
+<p>We build tools for real problems we see every day.</p>
+</div>
+<div class="value">
+<svg class="vicon" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#F3EEFA"/><rect x="18" y="18" width="28" height="28" rx="7" fill="none" stroke="#5B2A91" stroke-width="5"/></svg>
+<h3>Simple to use</h3>
+<p>No clutter and no surprises. If it needs a manual, we keep working on it.</p>
+</div>
+<div class="value">
+<img class="vicon" src="/icons/built-with-care.svg" alt="" width="64" height="64">
+<h3>Built with care</h3>
+<p>Every product carries our name, and a real person stands behind it.</p>
+</div>
 </section>
 
 <section id="about" class="center">
 <h2 class="section">Who we are</h2>
-<p>Purple Rootbeer is a family-owned app publisher based in Lehi, Utah. Every app we release on the Apple App Store carries our name, and we stand behind it.</p>
+<p>Purple Rootbeer is a small studio that builds the tools we wish already existed. We make apps for iPhone and iPad, web tools for teams, and websites, and we stand behind every one.</p>
 </section>
 
 <section id="support" class="band">
 <div class="center">
 <h2 class="section">Need a hand?</h2>
-<p>Email us about any of our apps and a member of our family will get back to you. App Store purchases and refunds are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+<p>Email us about any of our products and we'll get back to you. App Store purchases and refunds are handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 <a class="btn btn-outline" href="mailto:support@purplerootbeer.com">support@purplerootbeer.com</a>
-<p class="small">Mail: PO Box 65, Lehi, UT 84043</p>
 </div>
 </section>
 </main>
