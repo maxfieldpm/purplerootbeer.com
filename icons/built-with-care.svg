@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="A root beer float mug with a heart">
+  <rect width="1024" height="1024" fill="#5B2A91"/>
+  <!-- mug handle -->
+  <path d="M700 430 H760 Q840 430 840 520 V590 Q840 680 760 680 H700" fill="none" stroke="#EFE7FA" stroke-width="44"/>
+  <!-- mug glass -->
+  <path d="M250 360 H720 L690 820 Q686 850 656 850 H314 Q284 850 280 820 Z" fill="#EFE7FA"/>
+  <!-- root beer -->
+  <path d="M270 420 H700 L676 800 Q673 820 652 820 H318 Q297 820 294 800 Z" fill="#4A2A1C"/>
+  <!-- bubbles -->
+  <g fill="#7A4A30"><circle cx="360" cy="700" r="14"/><circle cx="420" cy="760" r="10"/><circle cx="600" cy="720" r="12"/><circle cx="560" cy="640" r="8"/></g>
+  <!-- foam with heart -->
+  <path d="M232 380 Q232 300 310 300 Q330 240 400 250 Q440 200 510 220 Q580 190 630 245 Q720 240 738 320 Q752 380 700 400 Q680 440 620 420 Q560 450 500 425 Q440 455 380 425 Q320 450 290 415 Q236 420 232 380 Z" fill="#FFF6EA"/>
+  <path d="M485 350 C485 318 448 308 432 332 C416 308 380 318 380 350 C380 385 432 410 432 410 C432 410 485 385 485 350 Z" fill="#E65A7A" transform="translate(48 -40)"/>
+</svg>

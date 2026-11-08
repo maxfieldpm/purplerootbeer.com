@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Hub and Hangar app icon">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1426"/>
+      <stop offset="0.55" stop-color="#1B2A47"/>
+      <stop offset="0.82" stop-color="#4A3A4A"/>
+      <stop offset="1" stop-color="#C9783A"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A1D24"/>
+      <stop offset="1" stop-color="#0A0C10"/>
+    </linearGradient>
+    <linearGradient id="runway" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2E37"/>
+      <stop offset="1" stop-color="#3A3F4A"/>
+    </linearGradient>
+    <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F6FA"/>
+      <stop offset="1" stop-color="#B9C1CE"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFC24A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFC24A" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="tile"><rect width="1024" height="1024"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="1024" height="1024" fill="url(#sky)"/>
+    <!-- stars -->
+    <g fill="#FFFFFF" opacity="0.7">
+      <circle cx="140" cy="130" r="3"/><circle cx="300" cy="80" r="2"/><circle cx="820" cy="110" r="3"/>
+      <circle cx="900" cy="230" r="2"/><circle cx="210" cy="260" r="2"/><circle cx="640" cy="60" r="2"/>
+    </g>
+    <ellipse cx="512" cy="640" rx="620" ry="60" fill="#E38A3B" opacity="0.35"/>
+    <!-- ground -->
+    <rect y="640" width="1024" height="384" fill="url(#ground)"/>
+    <!-- hangar silhouette with arched roof -->
+    <path d="M90 640 V560 Q90 500 200 490 H330 Q440 500 440 560 V640 Z" fill="#11151D"/>
+    <rect x="160" y="585" width="210" height="55" fill="#FFC24A" opacity="0.85"/>
+    <g stroke="#11151D" stroke-width="10"><line x1="212" y1="585" x2="212" y2="640"/><line x1="265" y1="585" x2="265" y2="640"/><line x1="318" y1="585" x2="318" y2="640"/></g>
+    <!-- control tower -->
+    <rect x="770" y="470" width="34" height="170" fill="#11151D"/>
+    <path d="M740 430 H834 L822 475 H752 Z" fill="#11151D"/>
+    <rect x="752" y="440" width="70" height="22" rx="3" fill="#7FD3FF" opacity="0.75"/>
+    <circle cx="787" cy="418" r="8" fill="#FF4D4D"/>
+    <!-- runway in perspective -->
+    <path d="M462 640 L562 640 L860 1024 L164 1024 Z" fill="url(#runway)"/>
+    <!-- center line dashes -->
+    <g fill="#F2F2F2">
+      <polygon points="508,660 516,660 518,690 506,690"/>
+      <polygon points="505,720 519,720 522,770 502,770"/>
+      <polygon points="500,815 524,815 528,895 496,895"/>
+      <polygon points="494,945 530,945 536,1024 488,1024"/>
+    </g>
+    <!-- amber edge lights converging -->
+    <g fill="#FFC24A">
+      <circle cx="466" cy="650" r="4"/><circle cx="558" cy="650" r="4"/>
+      <circle cx="440" cy="690" r="6"/><circle cx="584" cy="690" r="6"/>
+      <circle cx="402" cy="745" r="8"/><circle cx="622" cy="745" r="8"/>
+      <circle cx="350" cy="820" r="11"/><circle cx="674" cy="820" r="11"/>
+      <circle cx="276" cy="925" r="14"/><circle cx="748" cy="925" r="14"/>
+    </g>
+    <g fill="url(#glow)">
+      <circle cx="350" cy="820" r="40"/><circle cx="674" cy="820" r="40"/>
+      <circle cx="276" cy="925" r="52"/><circle cx="748" cy="925" r="52"/>
+    </g>
+    <!-- jetliner climbing out, viewed from below-front -->
+    <g transform="translate(560 330) rotate(-14)">
+      <!-- wings -->
+      <path d="M-20 0 L-330 70 L-330 92 L-10 40 Z" fill="#C9D0DB"/>
+      <path d="M20 0 L300 -60 L306 -40 L10 40 Z" fill="#DCE2EA"/>
+      <!-- engines -->
+      <rect x="-170" y="38" width="70" height="30" rx="15" fill="#8A93A3"/>
+      <rect x="120" y="-20" width="70" height="30" rx="15" fill="#9AA3B2"/>
+      <!-- fuselage -->
+      <path d="M-210 -8 Q-230 10 -210 28 L230 28 Q300 22 330 10 Q300 -4 230 -8 Z" fill="url(#hull)"/>
+      <!-- tail fin with amber stripe -->
+      <path d="M-200 -8 L-260 -110 L-215 -110 L-150 -8 Z" fill="#E6EAF0"/>
+      <path d="M-236 -70 L-224 -70 L-172 -8 L-186 -8 Z" fill="#F2A33A"/>
+      <path d="M-210 20 L-290 34 L-290 46 L-200 30 Z" fill="#C9D0DB"/>
+      <!-- windows -->
+      <g fill="#2B3446"><rect x="-150" y="2" width="300" height="6" rx="3"/></g>
+      <path d="M268 0 Q300 2 318 8 L300 8 Q290 4 268 4 Z" fill="#2B3446"/>
+      <!-- nav lights -->
+      <circle cx="-330" cy="80" r="7" fill="#FF4D4D"/>
+      <circle cx="303" cy="-50" r="7" fill="#3DDC84"/>
+    </g>
+  </g>
+</svg>

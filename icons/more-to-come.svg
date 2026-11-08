@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="More apps coming soon">
+  <rect width="1024" height="1024" fill="#EFE7FA"/>
+  <rect x="232" y="232" width="560" height="560" rx="132" fill="none" stroke="#5B2A91" stroke-width="28" stroke-dasharray="70 46" stroke-linecap="round"/>
+  <g stroke="#5B2A91" stroke-width="44" stroke-linecap="round">
+    <line x1="512" y1="402" x2="512" y2="622"/>
+    <line x1="402" y1="512" x2="622" y2="512"/>
+  </g>
+  <g fill="#C9B3E6">
+    <circle cx="820" cy="210" r="22"/>
+    <circle cx="880" cy="290" r="12"/>
+    <circle cx="190" cy="830" r="16"/>
+  </g>
+</svg>

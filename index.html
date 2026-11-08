@@ -30,7 +30,7 @@ h1{margin:0;font-weight:700;font-size:clamp(40px,6.5vw,84px);line-height:1.02;le
 .btn-outline:hover{background:var(--ink);color:#fff}
 .apps{display:flex;flex-wrap:wrap;justify-content:center;gap:48px 64px;padding:0 24px 112px}
 .app{flex:0 1 240px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-.icon{width:112px;height:112px;border-radius:28px}
+.icon{width:112px;height:112px;border-radius:26px;display:block;box-shadow:0 6px 18px rgba(28,22,38,.12)}
 .app h2{margin:8px 0 0;font-size:20px;font-weight:600}
 .app p{margin:0;font-size:16px;line-height:1.5;color:var(--muted)}
 .tag{padding:4px 12px;border-radius:999px;background:var(--tint);color:var(--brand);font-size:13px;font-weight:600}
@@ -66,22 +66,22 @@ footer a{padding:8px;color:var(--muted)}
 
 <section id="apps" class="apps" aria-label="Our apps">
 <article class="app">
-<div class="icon" style="background:#5B2A91" aria-hidden="true"></div>
-<h2>Our first app</h2>
-<p>Something simple and useful is on the way.</p>
+<img class="icon" src="/icons/hub-and-hangar.svg" alt="Hub &amp; Hangar app icon" width="112" height="112">
+<h2>Hub &amp; Hangar</h2>
+<p>Run your own airport. Build gates, sign airline deals, and grow a dirt strip into a busy hub.</p>
 <span class="tag">Coming soon</span>
 </article>
 <article class="app">
-<div class="icon" style="background:#C9B3E6" aria-hidden="true"></div>
+<img class="icon" src="/icons/more-to-come.svg" alt="" width="112" height="112">
 <h2>More to come</h2>
 <p>Every app we make does one job, and does it well.</p>
-<span class="tag">Coming soon</span>
+<span class="tag">In the works</span>
 </article>
 <article class="app">
-<div class="icon" style="background:#3B2418" aria-hidden="true"></div>
+<img class="icon" src="/icons/built-with-care.svg" alt="" width="112" height="112">
 <h2>Built with care</h2>
 <p>No clutter, no surprises, and a real person behind it.</p>
-<span class="tag">Coming soon</span>
+<span class="tag">Our promise</span>
 </article>
 </section>
 
