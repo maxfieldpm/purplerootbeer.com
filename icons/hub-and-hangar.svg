@@ -1,89 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Hub and Hangar app icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Hub and Hangar app icon: a jet climbing out over a lit runway at dusk">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0B1426"/>
-      <stop offset="0.55" stop-color="#1B2A47"/>
-      <stop offset="0.82" stop-color="#4A3A4A"/>
-      <stop offset="1" stop-color="#C9783A"/>
+      <stop offset="0" stop-color="#08122A"/><stop offset="0.38" stop-color="#1D2E55"/><stop offset="0.58" stop-color="#4B4766"/><stop offset="0.68" stop-color="#A86A5A"/><stop offset="0.72" stop-color="#E9944A"/>
     </linearGradient>
+    <radialGradient id="sun" cx="0.28" cy="0.70" r="0.45">
+      <stop offset="0" stop-color="#FFD08A" stop-opacity="0.95"/><stop offset="0.25" stop-color="#F7A24E" stop-opacity="0.5"/><stop offset="1" stop-color="#F7A24E" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1A1D24"/>
-      <stop offset="1" stop-color="#0A0C10"/>
+      <stop offset="0" stop-color="#20232B"/><stop offset="0.25" stop-color="#121419"/><stop offset="1" stop-color="#07080B"/>
     </linearGradient>
-    <linearGradient id="runway" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2A2E37"/>
-      <stop offset="1" stop-color="#3A3F4A"/>
+    <linearGradient id="asphalt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3B42"/><stop offset="0.5" stop-color="#2A2B31"/><stop offset="1" stop-color="#1C1D22"/>
     </linearGradient>
     <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F4F6FA"/>
-      <stop offset="1" stop-color="#B9C1CE"/>
+      <stop offset="0" stop-color="#FFE3C4"/><stop offset="0.18" stop-color="#F4F2EF"/><stop offset="0.55" stop-color="#C9CED8"/><stop offset="0.85" stop-color="#7E8696"/><stop offset="1" stop-color="#4E5566"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#FFC24A" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#FFC24A" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22345E"/><stop offset="1" stop-color="#101C38"/></linearGradient>
+    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9B0BD"/><stop offset="1" stop-color="#5D6475"/></linearGradient>
+    <linearGradient id="nacelle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9ECF1"/><stop offset="0.5" stop-color="#9EA6B4"/><stop offset="1" stop-color="#4C5363"/></linearGradient>
+    <filter id="blur6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="blur18" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="blur40" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.08"/></feComponentTransfer>
+    </filter>
     <clipPath id="tile"><rect width="1024" height="1024"/></clipPath>
   </defs>
   <g clip-path="url(#tile)">
-    <rect width="1024" height="1024" fill="url(#sky)"/>
-    <!-- stars -->
-    <g fill="#FFFFFF" opacity="0.7">
-      <circle cx="140" cy="130" r="3"/><circle cx="300" cy="80" r="2"/><circle cx="820" cy="110" r="3"/>
-      <circle cx="900" cy="230" r="2"/><circle cx="210" cy="260" r="2"/><circle cx="640" cy="60" r="2"/>
+    <rect width="1024" height="740" fill="url(#sky)"/>
+    <rect width="1024" height="740" fill="url(#sun)"/>
+    <g filter="url(#blur18)" opacity="0.55">
+      <ellipse cx="260" cy="520" rx="260" ry="16" fill="#F2A36A"/><ellipse cx="760" cy="470" rx="300" ry="12" fill="#C9886E"/><ellipse cx="520" cy="610" rx="420" ry="14" fill="#F6B27A"/>
     </g>
-    <ellipse cx="512" cy="640" rx="620" ry="60" fill="#E38A3B" opacity="0.35"/>
-    <!-- ground -->
-    <rect y="640" width="1024" height="384" fill="url(#ground)"/>
-    <!-- hangar silhouette with arched roof -->
-    <path d="M90 640 V560 Q90 500 200 490 H330 Q440 500 440 560 V640 Z" fill="#11151D"/>
-    <rect x="160" y="585" width="210" height="55" fill="#FFC24A" opacity="0.85"/>
-    <g stroke="#11151D" stroke-width="10"><line x1="212" y1="585" x2="212" y2="640"/><line x1="265" y1="585" x2="265" y2="640"/><line x1="318" y1="585" x2="318" y2="640"/></g>
-    <!-- control tower -->
-    <rect x="770" y="470" width="34" height="170" fill="#11151D"/>
-    <path d="M740 430 H834 L822 475 H752 Z" fill="#11151D"/>
-    <rect x="752" y="440" width="70" height="22" rx="3" fill="#7FD3FF" opacity="0.75"/>
-    <circle cx="787" cy="418" r="8" fill="#FF4D4D"/>
-    <!-- runway in perspective -->
-    <path d="M462 640 L562 640 L860 1024 L164 1024 Z" fill="url(#runway)"/>
-    <!-- center line dashes -->
-    <g fill="#F2F2F2">
-      <polygon points="508,660 516,660 518,690 506,690"/>
-      <polygon points="505,720 519,720 522,770 502,770"/>
-      <polygon points="500,815 524,815 528,895 496,895"/>
-      <polygon points="494,945 530,945 536,1024 488,1024"/>
+    <g fill="#FFFFFF" opacity="0.65">
+      <circle cx="120" cy="90" r="2"/><circle cx="330" cy="54" r="1.5"/><circle cx="890" cy="80" r="2"/><circle cx="960" cy="200" r="1.5"/><circle cx="60" cy="230" r="1.5"/><circle cx="700" cy="40" r="1.5"/>
     </g>
-    <!-- amber edge lights converging -->
+    <g fill="#14161D">
+      <rect x="0" y="706" width="1024" height="40"/>
+      <path d="M40 706 V690 H120 V680 H230 V694 H300 V706 Z"/>
+      <path d="M600 706 V686 Q680 672 760 686 V706 Z"/>
+      <rect x="846" y="616" width="22" height="92"/>
+      <path d="M828 596 H886 L878 626 H836 Z"/>
+    </g>
+    <rect x="836" y="604" width="42" height="12" fill="#9FD8FF" opacity="0.8"/>
+    <g fill="#FFC56A" opacity="0.85">
+      <rect x="60" y="696" width="5" height="3"/><rect x="74" y="696" width="5" height="3"/><rect x="88" y="696" width="5" height="3"/><rect x="140" y="688" width="5" height="3"/><rect x="156" y="688" width="5" height="3"/><rect x="200" y="688" width="5" height="3"/>
+      <rect x="620" y="694" width="5" height="3"/><rect x="640" y="692" width="5" height="3"/><rect x="700" y="692" width="5" height="3"/><rect x="730" y="694" width="5" height="3"/>
+    </g>
+    <circle cx="857" cy="590" r="5" fill="#FF3B3B"/><circle cx="857" cy="590" r="16" fill="#FF3B3B" opacity="0.35" filter="url(#blur6)"/>
+    <rect y="740" width="1024" height="284" fill="url(#ground)"/>
+    <rect y="700" width="1024" height="70" fill="#E59C5C" opacity="0.18" filter="url(#blur18)"/>
+    <path d="M478 742 L546 742 L900 1024 L124 1024 Z" fill="url(#asphalt)"/>
+    <path d="M482 742 L486 742 L170 1024 L150 1024 Z" fill="#D9D9D6" opacity="0.7"/>
+    <path d="M538 742 L542 742 L874 1024 L854 1024 Z" fill="#D9D9D6" opacity="0.7"/>
+    <g fill="#ECECE8" opacity="0.92">
+      <polygon points="510,752 514,752 515,768 509,768"/><polygon points="508,786 516,786 517,812 507,812"/><polygon points="506,836 518,836 520,876 504,876"/><polygon points="503,910 521,910 524,968 500,968"/><polygon points="499,1004 525,1004 527,1024 497,1024"/>
+    </g>
+    <g fill="#ECECE8" opacity="0.8">
+      <polygon points="380,930 410,930 396,975 360,975"/><polygon points="420,930 446,930 438,975 404,975"/><polygon points="578,930 604,930 620,975 586,975"/><polygon points="614,930 644,930 664,975 628,975"/>
+    </g>
+    <path d="M500 742 L524 742 L640 1024 L384 1024 Z" fill="#F0A060" opacity="0.07"/>
     <g fill="#FFC24A">
-      <circle cx="466" cy="650" r="4"/><circle cx="558" cy="650" r="4"/>
-      <circle cx="440" cy="690" r="6"/><circle cx="584" cy="690" r="6"/>
-      <circle cx="402" cy="745" r="8"/><circle cx="622" cy="745" r="8"/>
-      <circle cx="350" cy="820" r="11"/><circle cx="674" cy="820" r="11"/>
-      <circle cx="276" cy="925" r="14"/><circle cx="748" cy="925" r="14"/>
+      <g filter="url(#blur18)" opacity="0.8">
+        <circle cx="420" cy="800" r="14"/><circle cx="604" cy="800" r="14"/><circle cx="352" cy="862" r="22"/><circle cx="672" cy="862" r="22"/><circle cx="250" cy="952" r="32"/><circle cx="774" cy="952" r="32"/>
+      </g>
+      <circle cx="474" cy="752" r="3"/><circle cx="550" cy="752" r="3"/><circle cx="452" cy="772" r="4"/><circle cx="572" cy="772" r="4"/><circle cx="420" cy="800" r="5"/><circle cx="604" cy="800" r="5"/><circle cx="352" cy="862" r="8"/><circle cx="672" cy="862" r="8"/><circle cx="250" cy="952" r="11"/><circle cx="774" cy="952" r="11"/>
     </g>
-    <g fill="url(#glow)">
-      <circle cx="350" cy="820" r="40"/><circle cx="674" cy="820" r="40"/>
-      <circle cx="276" cy="925" r="52"/><circle cx="748" cy="925" r="52"/>
+    <g fill="#FFB54A" opacity="0.25" filter="url(#blur6)">
+      <ellipse cx="360" cy="895" rx="10" ry="30"/><ellipse cx="664" cy="895" rx="10" ry="30"/><ellipse cx="262" cy="995" rx="14" ry="40"/><ellipse cx="762" cy="995" rx="14" ry="40"/>
     </g>
-    <!-- jetliner climbing out, viewed from below-front -->
-    <g transform="translate(560 330) rotate(-14)">
-      <!-- wings -->
-      <path d="M-20 0 L-330 70 L-330 92 L-10 40 Z" fill="#C9D0DB"/>
-      <path d="M20 0 L300 -60 L306 -40 L10 40 Z" fill="#DCE2EA"/>
-      <!-- engines -->
-      <rect x="-170" y="38" width="70" height="30" rx="15" fill="#8A93A3"/>
-      <rect x="120" y="-20" width="70" height="30" rx="15" fill="#9AA3B2"/>
-      <!-- fuselage -->
-      <path d="M-210 -8 Q-230 10 -210 28 L230 28 Q300 22 330 10 Q300 -4 230 -8 Z" fill="url(#hull)"/>
-      <!-- tail fin with amber stripe -->
-      <path d="M-200 -8 L-260 -110 L-215 -110 L-150 -8 Z" fill="#E6EAF0"/>
-      <path d="M-236 -70 L-224 -70 L-172 -8 L-186 -8 Z" fill="#F2A33A"/>
-      <path d="M-210 20 L-290 34 L-290 46 L-200 30 Z" fill="#C9D0DB"/>
-      <!-- windows -->
-      <g fill="#2B3446"><rect x="-150" y="2" width="300" height="6" rx="3"/></g>
-      <path d="M268 0 Q300 2 318 8 L300 8 Q290 4 268 4 Z" fill="#2B3446"/>
-      <!-- nav lights -->
-      <circle cx="-330" cy="80" r="7" fill="#FF4D4D"/>
-      <circle cx="303" cy="-50" r="7" fill="#3DDC84"/>
+    <g transform="translate(540 380) rotate(-13)">
+      <path d="M40 40 L420 210 L420 120 Z" fill="#FFF3D6" opacity="0.10" filter="url(#blur18)"/>
+      <path d="M10 -6 L-150 -70 L-118 -74 L60 -14 Z" fill="#6A7182"/>
+      <path d="M-300 -8 L-372 -44 L-350 -46 L-262 -12 Z" fill="#6A7182"/>
+      <path d="M300 -36 C350 -36 382 -16 388 2 C382 20 350 36 300 36 L-220 36 C-290 32 -344 14 -372 -10 L-376 -22 C-340 -32 -280 -36 -220 -36 Z" fill="url(#hull)"/>
+      <path d="M380 10 C360 22 330 28 300 28 L-220 28 C-280 26 -330 14 -360 -2 L-356 -10 C-326 4 -278 16 -220 18 L300 18 C326 18 352 14 380 6 Z" fill="#1A2B52"/>
+      <path d="M-220 15 L300 15 C324 15 350 11 378 3 L380 6 C352 14 326 18 300 18 L-220 18 Z" fill="#F2A33A"/>
+      <path d="M-196 -36 L-306 -190 L-254 -190 L-120 -36 Z" fill="url(#tail)"/>
+      <path d="M-262 -150 L-244 -150 L-160 -36 L-178 -36 Z" fill="#F2A33A"/>
+      <path d="M-286 6 L-382 44 L-352 48 L-240 12 Z" fill="url(#wing)"/>
+      <g fill="#1B2232">
+        <rect x="-180" y="-14" width="9" height="12" rx="4"/><rect x="-158" y="-14" width="9" height="12" rx="4"/><rect x="-136" y="-14" width="9" height="12" rx="4"/><rect x="-114" y="-14" width="9" height="12" rx="4"/><rect x="-92" y="-14" width="9" height="12" rx="4"/><rect x="-70" y="-14" width="9" height="12" rx="4"/><rect x="-48" y="-14" width="9" height="12" rx="4"/><rect x="-26" y="-14" width="9" height="12" rx="4"/><rect x="-4" y="-14" width="9" height="12" rx="4"/>
+        <rect x="70" y="-14" width="9" height="12" rx="4"/><rect x="92" y="-14" width="9" height="12" rx="4"/><rect x="114" y="-14" width="9" height="12" rx="4"/><rect x="136" y="-14" width="9" height="12" rx="4"/><rect x="158" y="-14" width="9" height="12" rx="4"/><rect x="180" y="-14" width="9" height="12" rx="4"/><rect x="202" y="-14" width="9" height="12" rx="4"/><rect x="224" y="-14" width="9" height="12" rx="4"/><rect x="246" y="-14" width="9" height="12" rx="4"/>
+      </g>
+      <g fill="none" stroke="#9AA2B0" stroke-width="2">
+        <rect x="276" y="-24" width="20" height="40" rx="5"/><rect x="-206" y="-24" width="20" height="40" rx="5"/><rect x="34" y="-18" width="16" height="28" rx="4"/>
+      </g>
+      <path d="M332 -16 L362 -14 C368 -12 372 -8 374 -4 L338 -4 Z" fill="#141B29"/>
+      <path d="M70 18 L-110 96 L-74 100 L130 30 Z" fill="url(#wing)"/>
+      <path d="M-110 96 L-118 112 L-102 112 L-74 100 Z" fill="#525969"/>
+      <path d="M44 22 L84 22 L74 44 L40 44 Z" fill="#8C94A3"/>
+      <rect x="-4" y="38" width="132" height="50" rx="25" fill="url(#nacelle)"/>
+      <ellipse cx="126" cy="63" rx="9" ry="23" fill="#2A303C"/>
+      <path d="M-4 52 L-26 56 L-26 70 L-4 74 Z" fill="#5E6575"/>
+      <path d="M300 -36 C350 -36 382 -16 388 2 L382 -2 C374 -18 346 -32 300 -32 L-220 -32 C-280 -32 -336 -28 -372 -18 L-376 -22 C-340 -32 -280 -36 -220 -36 Z" fill="#FFD9A8" opacity="0.8"/>
+      <circle cx="-372" cy="-14" r="5" fill="#FFFFFF"/>
+      <circle cx="-118" cy="104" r="6" fill="#3DFF8E"/><circle cx="-118" cy="104" r="20" fill="#3DFF8E" opacity="0.35" filter="url(#blur6)"/>
+      <circle cx="4" cy="-38" r="6" fill="#FF3B3B"/><circle cx="4" cy="-38" r="20" fill="#FF3B3B" opacity="0.4" filter="url(#blur6)"/>
+      <circle cx="96" cy="32" r="8" fill="#FFFFFF"/><circle cx="96" cy="32" r="34" fill="#FFF3D6" opacity="0.7" filter="url(#blur18)"/>
     </g>
+    <rect x="-80" y="-80" width="1184" height="1184" fill="none" stroke="#000" stroke-opacity="0.45" stroke-width="240" filter="url(#blur40)"/>
+    <rect width="1024" height="1024" filter="url(#grain)"/>
   </g>
 </svg>
